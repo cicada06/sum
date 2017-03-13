@@ -12,13 +12,14 @@ int m[] = {3, 2, 2};
 int n;
 int k = 17;
 int *flag;
+int cnt = 0;
 
 void dfs(int i, int sum)
 {
     int j;
 
     if(sum == k) {
-        printf("%d = ", k);
+        printf("%d: %d = ", ++cnt, k);
         for(j = 0; j < n; j++) {
             if(flag[j]) {
                 printf("%d*%d + ", flag[j], d[j]);
